@@ -25,7 +25,7 @@ Pero a pesar de sus limitaciones, es capaz de ejecutar un mini juego que prueba 
 ![image](https://user-images.githubusercontent.com/63881067/156948181-3f1eb04a-2ea2-47c6-a826-3dbbf853bf05.png)
 
 
-## El resultado del diagrama anterior es el siguiente
+## El resultado del diagrama anterior es el siguiente (ignoren el desorden)
 ![20210105_134637](https://user-images.githubusercontent.com/63881067/156948329-1508cea9-a604-4232-b6e7-7ce6b95f4907.jpg)
 
 ## Conclusión
