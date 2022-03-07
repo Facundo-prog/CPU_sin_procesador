@@ -8,7 +8,7 @@ Esta CPU funciona sin un procesador que ejecute las instrucciones, sino que todo
 * Entradas y salidas de datos para interactuar con hardware externo
 
 ## Y... ¿Como hago para decirle que tiene que hacer?
-Para ello se desarrolló un compilador en Python que es capaz de interpretar instrucciones simples y convertirlas en un archivo binario que fuera ejecutar la CPU. Luego ese archivo generado se guarda en la micro SD y se la inserta en la CPU, presionando el botón de "Cargar programa" que se encuentra en el circuito se inicia la carga del mismo en la memoria RAM de la CPU, y por último, habilitando la señal de "Clock" (una señal que coordina todo la electrónica) se ejecuta el programa cargado.
+Para ello se desarrolló un compilador en Python (también llamado analizador léxico) que es capaz de interpretar instrucciones simples y convertirlas en un archivo binario que fuera ejecutar la CPU. Luego ese archivo generado se guarda en la micro SD y se la inserta en la CPU, presionando el botón de "Cargar programa" que se encuentra en el circuito se inicia la carga del mismo en la memoria RAM de la CPU, y por último, habilitando la señal de "Clock" (una señal que coordina todo la electrónica) se ejecuta el programa cargado.
 De este proceso se encarga el famoso microcontrolador Atmega328P o Arduino para los amigos, básicamente tomar el archivo binario y cargarlo a la memoria RAM; no hace nada más en la CPU.
 
 
