@@ -1,12 +1,18 @@
 import ply.ply.lex as lex 
 import re
 import codecs
+import platform
 import os
 import sys
 import math
 
-directorioTests = os.getcwd() + '/tests/'
-archivoCompilado = os.getcwd() + '/archivosSD/programa.asm'
+directorioTests = os.getcwd() + '\\tests\\'
+archivoCompilado = os.getcwd() + '\\archivosSD\\programa.asm'
+
+if platform.platform() == "linux" :
+  directorioTests = os.getcwd() + '/tests/'
+  archivoCompilado = os.getcwd() + '/archivosSD/programa.asm'
+
 contadorBinario = 0
 erroresEncontrados = 0
 direccionMaximaMemoria = 15;

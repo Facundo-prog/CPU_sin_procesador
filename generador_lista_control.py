@@ -1,7 +1,12 @@
 import os
+import platform
 import math
 
-archivo = os.getcwd() + '/archivosSD/control.asm'
+archivo = os.getcwd() + "\\archivosSD\\control.asm"
+
+if platform.platform() == "linux" :
+  archivo = os.getcwd() + '/archivosSD/control.asm'
+
 
 instruccionesControl = [
     # CONTROL
