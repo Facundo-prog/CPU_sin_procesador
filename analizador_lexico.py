@@ -5,8 +5,8 @@ import os
 import sys
 import math
 
-directorio = 'D:/Documentos/Computadora de 8 bits/Compilador ASM/test/'
-archivoCompilado = 'D:/Documentos/Computadora de 8 bits/Compilador ASM/compilado/programa.asm'
+directorioTests = os.getcwd() + '/tests/'
+archivoCompilado = os.getcwd() + '/archivosSD/programa.asm'
 contadorBinario = 0
 erroresEncontrados = 0
 direccionMaximaMemoria = 15;
@@ -165,7 +165,7 @@ def t_NUMBER(t):
 
     valorBinario = convertirABinario(t.value)
     file.write(valorBinario)
-    #file.write("\n")
+    #file.write("\n") # Insertar salto de linea al final
 
     return t
 
@@ -272,8 +272,8 @@ def buscarFicheros(directorio):
     return files[int(numArchivo)-1]
 
 
-archivo = buscarFicheros(directorio)
-test = directorio+archivo
+archivo = buscarFicheros(directorioTests)
+test = directorioTests + archivo
 fp = codecs.open(test, "r", "utf-8")
 cadena = fp.read()
 fp.close()

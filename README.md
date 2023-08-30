@@ -1,5 +1,11 @@
- # CPU sin procesador
+# CPU sin procesador
 Esta CPU funciona sin un procesador que ejecute las instrucciones, sino que todo el circuito se comporta como un procesador, más bien es un microprocesador en formato grande.
+
+## Compilacion de un programa ASM (ensamblador) a binario
+1- Ejecutar el archivo "generador_lista_control.py"
+2- Ejecutar el archivo "analizador_lexico.py" y seleccionar el proyecto que desea compilar en la terminal
+3- Copiar los archivos de la carpeta "archivosSD" a una MicroSD destinada a conectarse a la CPU
+4- Encender la CPU, presionar el boton PROG (programar) y encender la señal de CLOCK para que se ejecute el programa
 
 ## Partes que la componen
 * Memoria RAM donde se almacenan las instrucciones que tiene que ejecutar y los datos con los cuales tiene que trabajar

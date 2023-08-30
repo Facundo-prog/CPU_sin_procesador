@@ -1,0 +1,9 @@
+CODIR 0;#Bucle de sumas sucesivas
+COALU 0;
+CORA 1;
+AALUA 0;
+COOUT 12;
+CACALU 0;
+JCCO 0;
+CACDOUT 0;
+JIO 3;
