@@ -30,16 +30,19 @@ Pero a pesar de sus limitaciones, es capas de ejecutar programas interesantes. P
 
 
 ## Este es un diagrama de bloques para que entiendas un poco como funciona internamente
-![image](https://user-images.githubusercontent.com/63881067/156947993-b42a4ffd-e17b-4b95-ac39-520f419b4e01.png)
-![image](https://user-images.githubusercontent.com/63881067/156948033-4300fcc1-0d9f-4c0c-a472-4b054f27ada8.png)
+![image](https://github.com/Facundo-prog/CPU_sin_procesador/blob/v6.0.0/images/cpu%20blocks%20diagram%20a.png)
+![image](https://github.com/Facundo-prog/CPU_sin_procesador/blob/v6.0.0/images/cpu%20blocks%20diagram%20b.png)
 
 
 ## Y este es el diagrama eléctrico que hace que todo funcione, si lo sé, es un enredo de cables ¿no?
-![image](https://user-images.githubusercontent.com/63881067/156948181-3f1eb04a-2ea2-47c6-a826-3dbbf853bf05.png)
+![image](https://github.com/Facundo-prog/CPU_sin_procesador/blob/v6.0.0/images/circuit%20diagram.png)
 
 
-## El resultado del diagrama anterior es el siguiente (ignoren el desorden)
-![image](https://user-images.githubusercontent.com/63881067/156948329-1508cea9-a604-4232-b6e7-7ce6b95f4907.jpg)
+## El resultado del diagrama anterior es el siguiente
+![image](https://github.com/Facundo-prog/CPU_sin_procesador/blob/v6.0.0/images/IMG_20231130_115708.jpg)
+
+## Placas de circuitos por separado
+![image](https://github.com/Facundo-prog/CPU_sin_procesador/blob/v6.0.0/images/IMG_20231130_120751.jpg)
 
 ## Conclusión
 Si no entendiste ningún diagrama, está bien no te preocupes, hasta yo que lo hice tengo que recordar lo que hacia esacada parte. La idea de este proyecto es mostrar que partes esenciales intervienen en el funcionamiento un microprocesador, como el que ejecuto ciertas instrucciones para que puedas ver esto. En fin, este proyecto no es nada revolucionario, solo demuestra de forma mas simple el funcionamiento de una PC comercial (mucho menos potente).
