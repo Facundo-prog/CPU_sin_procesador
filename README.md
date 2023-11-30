@@ -1,26 +1,32 @@
-# CPU sin procesador
+# CPU sin procesador V6
 Esta CPU funciona sin un procesador que ejecute las instrucciones, sino que todo el circuito se comporta como un procesador, más bien es un microprocesador en formato grande.
 
 ## Compilacion de un programa ASM (ensamblador) a binario
-* Ejecutar el archivo "generador_lista_control.py"
-* Ejecutar el archivo "analizador_lexico.py" y seleccionar el proyecto que desea compilar en la terminal
-* Copiar los archivos de la carpeta "archivosSD" a una MicroSD destinada a conectarse a la CPU
-* Encender la CPU, presionar el boton PROG (programar) y encender la señal de CLOCK para que se ejecute el programa
+* Ejecutar el archivo "instructions_generator.py" que generará un archivo control.asm (solo se requiere generarlo una vez)
+* Ejecutar el archivo "compiler.py" y seleccionar el proyecto que desea compilar en la terminal
+* Copiar los archivos generados "control.asm" y "program.asm" a una MicroSD destinada a conectarse a la CPU
+
+## Ejecución de un programa
+* Encender la CPU
+* Verificar que el led de STATUS parpadee cada 1 segundo (si es mas rapido es porque hay un error en la MicroSD)
+* Presionar el boton PROG (programar), el led de STATUS quedara encendido, esperar a que el led empieze a parpadear cada 1 segundo nuevamente (indicando que finalizó la programación)
+* Mantener el boton de RESET mientras se habilita la señal de CLOCK. Soltar el boton de RESET para que se ejecute el programa
 
 ## Partes que la componen
 * Memoria RAM donde se almacenan las instrucciones que tiene que ejecutar y los datos con los cuales tiene que trabajar
 * Un circuito de control que orquesta a todos los componentes electrónicos y dicta a qué velocidad funciona el conjunto
-* Sistema de carga del programa, en donde mediante una tarjeta micro SD se guardan las instrucciones en formato binario
-* Entradas y salidas de datos para interactuar con hardware externo
+* Sistema de carga del programa, en donde mediante una tarjeta MicroSD se guardan las instrucciones y datos en formato binario
+* Modulo ALU que se encarga de realizar las operaciones aritmeticas y logicas, además de almacenar datos en los registros
+* Entradas y salidas de datos para interactuar con hardware externo.
 
-## Y... ¿Como hago para decirle que tiene que hacer?
-Para ello se desarrolló un compilador en Python (también llamado analizador léxico) que es capaz de interpretar instrucciones simples y convertirlas en un archivo binario que fuera ejecutar la CPU. Luego ese archivo generado se guarda en la micro SD y se la inserta en la CPU, presionando el botón de "Cargar programa" que se encuentra en el circuito se inicia la carga del mismo en la memoria RAM de la CPU, y por último, habilitando la señal de "Clock" (una señal que coordina todo la electrónica) se ejecuta el programa cargado.
-De este proceso se encarga el famoso microcontrolador Atmega328P o Arduino para los amigos, básicamente tomar el archivo binario y cargarlo a la memoria RAM; no hace nada más en la CPU.
+## Y... ¿Cómo ejecuta el programa?
+Para ello se desarrolló un compilador en Python (también llamado analizador léxico) que es capaz de interpretar instrucciones simples (lenguaje ensamblador) y convertirlas en un archivo binario que pueda ejecutar la CPU. Luego ese archivo generado se guarda en la MicroSD y se la inserta en la CPU, presionando el botón de "PROG" se inicia la carga del programa en la memoria RAM de la CPU, y por último, habilitando la señal de "CLOCK" (una señal que coordina todo la electrónica) se ejecuta el programa cargado.
+Este proceso lo realiza el famoso microcontrolador Atmega328P o Arduino para los amigos, básicamente tomar el archivo binario y cargarlo a la memoria RAM; no interviene en ningún otro proceso en la CPU.
 
 
 ## Bien, pero... ¿Qué puede hacer?
-La respuesta es, no mucho, debido a que está construida con componentes electrónicos simples no se pueden hacer cosas muy complejas. Pero bueno, es una CPU sin procesador, no se le puede pedir mucho ¿no?
-Pero a pesar de sus limitaciones, es capaz de ejecutar un mini juego que prueba tu rapidez con un botón. Con puntos ganados e intentos fallidos he, no cualquier jueguito simple. Además, se pueden leer sensores, controlar relevadores, leds, otros circuitos integrados y demás.
+La respuesta es, no mucho, debido a que está construida con componentes electrónicos simples no se pueden hacer cosas muy complejas. El objetivo no es que sea potente, si no que sea lo mas simple posible para que cualquiera pueda entender que partes intervienen en su funcionamiento.
+Pero a pesar de sus limitaciones, es capas de ejecutar programas interesantes. Podemos leer sensores, controlar relevadores, leds, otros circuitos integrados y demás.
 
 
 ## Este es un diagrama de bloques para que entiendas un poco como funciona internamente
@@ -33,7 +39,7 @@ Pero a pesar de sus limitaciones, es capaz de ejecutar un mini juego que prueba 
 
 
 ## El resultado del diagrama anterior es el siguiente (ignoren el desorden)
-![20210105_134637](https://user-images.githubusercontent.com/63881067/156948329-1508cea9-a604-4232-b6e7-7ce6b95f4907.jpg)
+![image](https://user-images.githubusercontent.com/63881067/156948329-1508cea9-a604-4232-b6e7-7ce6b95f4907.jpg)
 
 ## Conclusión
-Si no entendiste ningún diagrama, está bien no te preocupes, hasta yo que lo hice tengo que recordar lo que hacia esa parte. La idea de este proyecto es mostrar que partes esenciales intervienen en el funcionamiento un procesador, como el que ejecuto ciertas instrucciones para que puedas ver esto. En fin, este proyecto no es nada revolucionario, solo un puñado de componentes electrónicos y lucecitas de colores, pero para una persona curiosa del tema es la entrada a el mundo de la electrónica y la programación.
+Si no entendiste ningún diagrama, está bien no te preocupes, hasta yo que lo hice tengo que recordar lo que hacia esacada parte. La idea de este proyecto es mostrar que partes esenciales intervienen en el funcionamiento un microprocesador, como el que ejecuto ciertas instrucciones para que puedas ver esto. En fin, este proyecto no es nada revolucionario, solo demuestra de forma mas simple el funcionamiento de una PC comercial (mucho menos potente).

@@ -1,0 +1,569 @@
+CORA 3;# Seteo 0 puntos y 3 intentos (0000 0011)
+CORB 0;# Seteo 0 de posicion (0000 0000)
+CORC 160;# Seteo 10 para la velocidad y 0 para los ciclos de velocidad (1010 0000)
+CODIR 0;
+COOUT1 3;#----Inicializacion LCD----
+COOUT2 2;#----Secuencia 1----
+COOUT2 0;
+COOUT2 2;
+COOUT2 0;
+COOUT2 2;
+COOUT2 0;
+COOUT1 2;#----Secuencia 2----
+COOUT2 2;
+COOUT2 0;
+COOUT2 2;
+COOUT2 0;
+COOUT1 1;#----Secuencia 3----
+COOUT2 2;
+COOUT2 0;
+COOUT1 0;#----Secuencia 4----
+COOUT2 2;
+COOUT2 0;
+COOUT1 15;#----FIN Inicializacion----
+COOUT2 2;
+COOUT2 0;
+COOUT1 2;# Seteo 2 lineas de Display
+COOUT2 2;
+COOUT2 0;
+COOUT1 8;
+COOUT2 2;
+COOUT2 0;
+COOUT1 0;# Desactivo el cursor
+COOUT2 2;
+COOUT2 0;
+COOUT1 12;
+COOUT2 2;
+COOUT2 0;
+COOUT1 4;#----Creacion de Caracteres Especiales. Muñequito (0100 0000)----
+COOUT2 2;
+COOUT2 0;
+COOUT1 0;
+COOUT2 2;
+COOUT2 0;
+COOUT1 0;# 0000 1110
+COOUT2 3;
+COOUT2 1;
+COOUT1 14;
+COOUT2 3;
+COOUT2 1;
+COOUT1 0;# 0000 1110
+COOUT2 3;
+COOUT2 1;
+COOUT1 14;
+COOUT2 3;
+COOUT2 1;
+COOUT1 1;# 0001 0100
+COOUT2 3;
+COOUT2 1;
+COOUT1 4;
+COOUT2 3;
+COOUT2 1;
+COOUT1 1;# 0001 1111
+COOUT2 3;
+COOUT2 1;
+COOUT1 15;
+COOUT2 3;
+COOUT2 1;
+COOUT1 0;# 0000 0101
+COOUT2 3;
+COOUT2 1;
+COOUT1 5;
+COOUT2 3;
+COOUT2 1;
+COOUT1 0;# 0000 0100
+COOUT2 3;
+COOUT2 1;
+COOUT1 4;
+COOUT2 3;
+COOUT2 1;
+COOUT1 0;# 0000 1010
+COOUT2 3;
+COOUT2 1;
+COOUT1 10;
+COOUT2 3;
+COOUT2 1;
+COOUT1 1;# 0001 0001
+COOUT2 3;
+COOUT2 1;
+COOUT2 3;
+COOUT2 1;
+COOUT1 4;#----Caracter Flecha (0100 1000)----
+COOUT2 2;
+COOUT2 0;
+COOUT1 8;
+COOUT2 2;
+COOUT2 0;
+COOUT1 0;# 0000 0000
+COOUT2 3;
+COOUT2 1;
+COOUT2 3;
+COOUT2 1;
+COOUT1 0;# 0000 0100
+COOUT2 3;
+COOUT2 1;
+COOUT1 4;
+COOUT2 3;
+COOUT2 1;
+COOUT1 0;# 0000 0100
+COOUT2 3;
+COOUT2 1;
+COOUT1 4;
+COOUT2 3;
+COOUT2 1;
+COOUT1 0;# 0000 0100
+COOUT2 3;
+COOUT2 1;
+COOUT1 4;
+COOUT2 3;
+COOUT2 1;
+COOUT1 0;# 0000 0100
+COOUT2 3;
+COOUT2 1;
+COOUT1 4;
+COOUT2 3;
+COOUT2 1;
+COOUT1 1;# 0001 0101
+COOUT2 3;
+COOUT2 1;
+COOUT1 5;
+COOUT2 3;
+COOUT2 1;
+COOUT1 0;# 0000 1010
+COOUT2 3;
+COOUT2 1;
+COOUT1 10;
+COOUT2 3;
+COOUT2 1;
+COOUT1 0;# 0000 0100
+COOUT2 3;
+COOUT2 1;
+COOUT1 4;
+COOUT2 3;
+COOUT2 1;
+COOUT1 0;#----Clear LCD (0000 0001) ----
+COOUT2 2;
+COOUT2 0;
+COOUT1 1;
+COOUT2 2;
+COOUT2 0;
+COOUT1 5;#----Mostrar pantalla inicial. P----
+COOUT2 3;
+COOUT2 1;
+COOUT1 0;
+COOUT2 3;
+COOUT2 1;
+CRAALU 0;# Obtengo los puntos ganados
+NALUO 240;
+CACCALU 0;
+NALUO 255;
+CACCALU 0;
+AALUO 241;# Bucle de restas
+CACCALU 0;
+JCCO 160;
+AALUO 15;
+COOUT1 3;# Imprimo el resultado
+COOUT2 3;
+COOUT2 1;
+CACCOUT1 0;
+COOUT2 3;
+COOUT2 1;
+COOUT1 2;# ESPACIO
+COOUT2 3;
+COOUT2 1;
+COOUT1 0;
+COOUT2 3;
+COOUT2 1;
+COOUT1 4;# I
+COOUT2 3;
+COOUT2 1;
+COOUT1 9;
+COOUT2 3;
+COOUT2 1;
+COOUT1 3;# Obtener intentos posibles
+COOUT2 3;
+COOUT2 1;
+CRAALU 0;
+NALUO 15;
+CACCALU 0;
+NALUO 255;
+CACCOUT1 0;
+COOUT2 3;
+COOUT2 1;
+COOUT1 2;# ESPACIO
+COOUT2 3;
+COOUT2 1;
+COOUT1 0;
+COOUT2 3;
+COOUT2 1;
+COOUT1 4;# A
+COOUT2 3;
+COOUT2 1;
+COOUT1 1;
+COOUT2 3;
+COOUT2 1;
+COOUT1 5;# T
+COOUT2 3;
+COOUT2 1;
+COOUT1 4;
+COOUT2 3;
+COOUT2 1;
+COOUT1 5;# R
+COOUT2 3;
+COOUT2 1;
+COOUT1 2;
+COOUT2 3;
+COOUT2 1;
+COOUT1 4;# A
+COOUT2 3;
+COOUT2 1;
+COOUT1 1;
+COOUT2 3;
+COOUT2 1;
+COOUT1 5;# P
+COOUT2 3;
+COOUT2 1;
+COOUT1 0;
+COOUT2 3;
+COOUT2 1;
+COOUT1 4;# A
+COOUT2 3;
+COOUT2 1;
+COOUT1 1;
+COOUT2 3;
+COOUT2 1;
+COOUT1 4;# L
+COOUT2 3;
+COOUT2 1;
+COOUT1 12;
+COOUT2 3;
+COOUT2 1;
+COOUT1 4;# O
+COOUT2 3;
+COOUT2 1;
+COOUT1 15;
+COOUT2 3;
+COOUT2 1;
+COOUT1 2;# ESPACIO
+COOUT2 3;
+COOUT2 1;
+COOUT1 0;
+COOUT2 3;
+COOUT2 1;
+COOUT1 0;# Caracter especial Flecha
+COOUT2 3;
+COOUT2 1;
+COOUT1 1;
+COOUT2 3;
+COOUT2 1;
+CODIR 1;# Obtengo la velocidad (parte alta de la memoria)
+CRCALU 0;
+NALUO 240;
+CACCALU 0;
+NALUO 255;
+CACCALU 0;
+AALUO 241;# Bucle de restas
+CACCALU 0;
+JCCO 8;# POS 264
+AALUO 15;
+CACCALU 0;
+AALURC 0;# Sumo la velocidad obtenida al registro C para que quede (1010 1010)
+CACCRC 0;
+CRCALU 0;# Cargo la parte baja del registro C en el registro ALU
+NALUO 15;
+CACCALU 0;
+NALUO 255;
+CACCALU 0;
+AALUO 255;# Restas sucesivas
+JCZO 64;# Avanza el muñequito (POS 320)
+CRCALU 0;# Le resto 1 a la parte baja del registro C
+AALUO 255;
+CACCRC 0;
+CACCDOUT 0;# Imprimir el estado del registro
+JIO 34;# (POS 290)
+
+
+
+
+
+
+>290
+CI2ALU 0;#----Obtencion del estado del boton----
+AALUO 1;
+CODIR 1;
+JCCO 44;# Salto si se preciona el boton (POS 300)
+JIO 15;# Si no se preciono vuelve a las restas sucesivas (POS 271)
+
+
+
+
+>300
+CRBALU 0;# Comprueba si el muñequito esta debajo de la flecha
+AALUO 241;
+JCZO 114; # Preciono bien (POS 370)
+CRAALU 0;# Obtengo los intentos y le resto 1
+NALUO 15;
+CACCALU 0;
+NALUO 255;
+CACCALU 0;
+AALUO 255;
+JCZO 224;# Perdio el juego (POS 480)
+CRAALU 0;# Resto 1 a los intentos
+AALUO 255;
+CACCRA 0;
+CORB 0;# Seteo a 0 la posicion del muñequito
+CODIR 0;# Vuelvo a mostrar la Pantalla inicial con los datos actualizados
+JIO 143;
+
+
+
+>320 # (usa 26 posiciones hasta la 345)
+COALU 241;# Verifico que la posicion sea < 16
+AALURB 0;
+JCZO 94;# Vuelvo al inicio el muñequito (POS 350)
+COOUT1 12;# Muevo el cursor a la posicion del muñequito
+COOUT2 2;
+COOUT2 0;
+CRBOUT1 0;# Cargo la posicion en la OUT
+COOUT2 2;
+COOUT2 0;
+COOUT1 2;# Imprimo un espacion en blanco
+COOUT2 3;
+COOUT2 1;
+COOUT1 0;
+COOUT2 3;
+COOUT2 1;
+COOUT1 0;# Imprimo un el muñequito
+COOUT2 3;
+COOUT2 1;
+COOUT2 3;
+COOUT2 1;
+CRBALU 0;# Sumo 1 a la posicion
+AALUO 1;
+CACCRB 0;
+JIO 2;# Vuelvo para leer el boton
+
+
+
+
+
+>350
+COOUT1 12;# Muevo el cursor a la posicion del muñequito
+COOUT2 2;
+COOUT2 0;
+CRBOUT1 0;# Cargo la posicion en la OUT
+COOUT2 2;
+COOUT2 0;
+COOUT1 2;# Imprimo un espacion en blanco
+COOUT2 3;
+COOUT2 1;
+COOUT1 0;
+COOUT2 3;
+COOUT2 1;
+CORB 0;# Seteo a 0 la posicion del muñequito
+JIO 67;# Vuelvo a la funcion (POS 323)
+
+
+
+
+
+>370
+COALU 16;# Sumamos 1 a los puntos
+AALURA 0;
+CACCRA 0;
+CORB 0;# Seteo a 0 la posicion del muñequito
+CRAALU 0;# Obtengo los puntos ganados
+NALUO 240;
+CACCALU 0;
+NALUO 255;
+CACCALU 0;
+AALUO 241;# Bucle de restas
+CACCALU 0;
+JCCO 123;
+AALUO 15;
+CACCALU 0;# Verifico si puntos = 3
+AALUO 253;
+JCZO 139;# Gano el juego (POS 395)
+CRCALU 0;# Si no gano aumento la velocidad (resto 3 a la parte alta del registro C)
+AALUO 206;
+CACCRC 0;
+CODIR 0;# Vuelvo a mostrar la Pantalla inicial con los datos actualizados
+JIO 143;
+
+
+
+>395
+COOUT1 0;#----Clear LCD (0000 0001) ----
+COOUT2 2;
+COOUT2 0;
+COOUT1 1;
+COOUT2 2;
+COOUT2 0;
+COOUT1 8;# Muevo el cursor
+COOUT2 2;
+COOUT2 0;
+COOUT1 3;
+COOUT2 2;
+COOUT2 0;
+COOUT2 1;# G
+COOUT1 4;
+COOUT2 3;
+COOUT2 1;
+COOUT1 7;
+COOUT2 3;
+COOUT2 1;
+COOUT1 4;# A
+COOUT2 3;
+COOUT2 1;
+COOUT1 1;
+COOUT2 3;
+COOUT2 1;
+COOUT1 4;# N
+COOUT2 3;
+COOUT2 1;
+COOUT1 14;
+COOUT2 3;
+COOUT2 1;
+COOUT1 4;# A
+COOUT2 3;
+COOUT2 1;
+COOUT1 1;
+COOUT2 3;
+COOUT2 1;
+COOUT1 5;# S
+COOUT2 3;
+COOUT2 1;
+COOUT1 3;
+COOUT2 3;
+COOUT2 1;
+COOUT1 5;# T
+COOUT2 3;
+COOUT2 1;
+COOUT1 4;
+COOUT2 3;
+COOUT2 1;
+COOUT1 4;# E
+COOUT2 3;
+COOUT2 1;
+COOUT1 5;
+COOUT2 3;
+COOUT2 1;
+COOUT1 2;# ESPACIO
+COOUT2 3;
+COOUT2 1;
+COOUT1 0;
+COOUT2 3;
+COOUT2 1;
+COOUT1 3;# :
+COOUT2 3;
+COOUT2 1;
+COOUT1 10;
+COOUT2 3;
+COOUT2 1;
+COOUT1 2;# )
+COOUT2 3;
+COOUT2 1;
+COOUT1 9;
+COOUT2 3;
+COOUT2 1;
+CORA 3;# Seteo valores iniciales
+CORB 0;
+CORC 160;
+CI2ALU 0;#----Obtencion del estado del boton----
+AALUO 1;
+JCCO 219;# Salto si se preciona el boton (POS 475)
+JIO 215;# Vuelvo al ciclo
+CODIR 0;# Vuelvo a mostrar la pantalla inicial
+JIO 143;
+
+
+>480
+COOUT1 0;#----Clear LCD (0000 0001) ----
+COOUT2 2;
+COOUT2 0;
+COOUT1 1;
+COOUT2 2;
+COOUT2 0;
+COOUT1 8;# Muevo el cursor
+COOUT2 2;
+COOUT2 0;
+COOUT1 2;
+COOUT2 2;
+COOUT2 0;
+COOUT2 1;# P
+COOUT1 5;
+COOUT2 3;
+COOUT2 1;
+COOUT1 0;
+COOUT2 3;
+COOUT2 1;
+COOUT1 4;# E
+COOUT2 3;
+COOUT2 1;
+COOUT1 5;
+COOUT2 3;
+COOUT2 1;
+COOUT1 5;# R
+COOUT2 3;
+COOUT2 1;
+COOUT1 2;
+COOUT2 3;
+COOUT2 1;
+COOUT1 4;# D
+COOUT2 3;
+COOUT2 1;
+COOUT1 4;
+COOUT2 3;
+COOUT2 1;
+COOUT1 4;# I
+COOUT2 3;
+COOUT2 1;
+COOUT1 9;
+COOUT2 3;
+COOUT2 1;
+COOUT1 5;# S
+COOUT2 3;
+COOUT2 1;
+COOUT1 3;
+COOUT2 3;
+COOUT2 1;
+COOUT1 5;# T
+COOUT2 3;
+COOUT2 1;
+COOUT1 4;
+COOUT2 3;
+COOUT2 1;
+COOUT1 4;# E
+COOUT2 3;
+COOUT2 1;
+COOUT1 5;
+COOUT2 3;
+COOUT2 1;
+COOUT1 2;# ESPACIO
+COOUT2 3;
+COOUT2 1;
+COOUT1 0;
+COOUT2 3;
+COOUT2 1;
+COOUT1 3;# :
+COOUT2 3;
+COOUT2 1;
+COOUT1 10;
+COOUT2 3;
+COOUT2 1;
+COOUT1 2;# (
+COOUT2 3;
+COOUT2 1;
+COOUT1 8;
+COOUT2 3;
+COOUT2 1;
+CORA 3;# Juego Perdido
+CORB 0;
+CORC 160;
+CODIR 2;
+CI2ALU 0;#----Obtencion del estado del boton----
+AALUO 1;
+JCCO 55;# Salto si se preciona el boton (POS 567)
+JIO 51;# Vuelvo al ciclo
+CODIR 0;# Vuelvo a mostrar la pantalla inicial
+JIO 143;
